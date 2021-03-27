@@ -1,0 +1,72 @@
+/*
+Lab 3 CSS styles
+CSS styles for Ultimate frisbee page
+*/
+
+body {
+  background-color: #D4D46A;
+  color: #515E91;
+  font: 12pt "Tahoma", "Arial", sans-serif;
+}
+
+#spec {
+  text-align: center;
+  width: 86%;
+  height: 120vh;
+  position: absolute;
+  top: 8%;
+  left: 6%;
+  filter: blur(55px);
+  z-index: -1;
+}
+
+#wrapper{
+  text-align: center;
+  width: 20%;
+  margin: 0 26%;
+}
+
+
+#menu { font-family: 'Courier New', Courier, monospace; }
+#music { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+#location { font-family: 'Times New Roman', Times, serif; }
+
+#main {
+  text-align: center;
+}
+
+#main-img{
+  border: 2px solid #515E91;
+}
+
+#footer {
+  text-align: center;
+  font-size: 75%;
+}
+
+th, td {
+  border: 2px solid #515E91;
+  padding: 8px
+}
+
+tbody tr:nth-child(even) {
+  background-color: aliceblue;;
+}
+
+.altrow {
+  background-color: #92D18B;
+}
+
+li {
+  list-style-type: square;
+  margin: 0 auto;  
+}
+
+.center {
+  text-align: left;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  margin-top: 30px;
+}
