@@ -1,0 +1,41 @@
+.advertisement
+{
+	width:100px;
+	height:150px; 
+	border-color:black;
+	border-width:2px; 
+	background-color:gray; 
+	color:white;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.image img {
+	width: 250px;
+	float: left;
+	padding: 0 10px;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.title{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.header, .content{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.content {
+	margin-top: 20px;
+}
+
+.head {
+	text-align: center;
+	margin-top: 70px;
+}
