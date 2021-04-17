@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>Activity5</title>
@@ -27,7 +27,7 @@
               </p>
               <p>
                 <label for="countries">Country:</label>  
-                <select name="countries">
+                <select name="countries" id="countries">
                     <option value="USA">America</option>
                     <option value="TR">Turkey</option>
                     <option value="DE">Germany</option>
