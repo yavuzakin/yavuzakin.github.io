@@ -1,0 +1,16 @@
+.form-container {
+    max-width: 30%;
+    margin: 100px auto;
+    border: 1px solid black;
+    padding: 50px;
+}
+
+.form-line {
+    display: inline;
+    line-height: 30px;
+}
+
+label {
+    float: left;
+    width: 300px;
+}
