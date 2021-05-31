@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Import Bootstrap5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!--<link rel="icon" href="<%= BASE_URL %>favicon.ico">-->
+  <!-- Validation -->
+  <link rel="stylesheet" href="../assets/css/validation/form-validation.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- JQuery -->
+  <script src="../assets/js/jquery/jquery.min.js"></script>
+  <!-- Import Bootstrap5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+  crossorigin="anonymous"></script>
+  <!-- Sweetalert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.12/dist/sweetalert2.all.min.js"></script>
+  <!-- Validation -->
+  <script src="../assets/js/validation/jqBootstrapValidation.js"></script>
+  <!-- Contact Us JS-->
+  <script src="../assets/js/contact-us/contact-us.js"></script>
+  
+  <title>Contact Us</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar bg-light">
+    <nav class="navbar navbar-expand-lg nav-container" :class="{ 'navbar--hidden': !showNavbar }">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-light link" aria-current="page" href="../index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light link" aria-current="page" href="./events.html">EVENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light link" aria-current="page" href="./gallery.html">GALLERY</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn contact-button mr-5" type="submit"><a class="nav-link contact-link" aria-current="page"
+                href="./contact-us.html">CONTACT US</a></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <a v-if="showNavbar" href="../index.html">
+      <img class="logo" src="../assets/images/logo-son2.png" alt="" width="50" height="44" />
+    </a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="contact-us-container">
+    <!-- Contact Form -->
+    <div class="container">
+      <div class="row">
+        <h2 class="form-header my-4">Drop a Message</h2>
+      </div>
+      
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3 form-group">
+                    <label for="exampleInputEmail1" class="form-label">First Name</label>
+                    <div class="controls">
+                      <input type="text" class="form-control" id="exampleInputEmail1"  data-validation-required-message="This field is required" required>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3 form-group">
+                    <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                    <div class="controls">
+                      <input type="text" class="form-control" id="exampleInputPassword1" required>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-3 form-group">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <div class="controls">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  </div>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-3 form-group">
+                  <label for="exampleCheck1" class="mb-2">Your Message</label>
+                  <div class="controls">
+                    <textarea rows="5" class="form-control" id="exampleCheck1" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn">SUBMIT</button>
+          </form>
+
+    </div>
+    <!-- Map -->
+    <div class="map-container">
+      <!--<div class="row mb-3">
+        <h2 class="map-header">Find Us Here</h2>
+      </div>-->
+      <div class="row">
+        <div class="col-md-12 px-0">
+          <!--<div class="card">-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48939.3668956798!2d32.775244067448234!3d39.9478663831658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34c1c008f707b%3A0x9a58173fbf172e99!2zQW5rYXJhIFnEsWxkxLFyxLFtIEJleWF6xLF0IMOcbml2ZXJzaXRlc2k!5e0!3m2!1str!2str!4v1622149218045!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER-->
+  <div class="footer">
+    <div class="row footer-first-row">
+      <div class="footer-line"></div>
+      <img src="../assets/images/logo-son2.png" class="footer-logo" alt="">
+    </div>
+    <div class="row footer-second-row">
+      <div class="col">
+        <div class="symbols">
+          <a href="https://www.facebook.com"><i class="fab  fa-2x fa-facebook-square"></i></a>
+          <a href="https://www.instagram.com"><i class="fab fa-2x fa-instagram-square"></i></a>
+          <a href="https://www.twitter.com"><i class="fab fa-2x fa-twitter-square"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="copyright">
+          <span>&#169;</span>
+          <span>Copyright. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
